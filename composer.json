@@ -2,7 +2,7 @@
     "name": "mahdyfo/society-simulator",
     "autoload": {
         "psr-4": {
-            "App\\": "src/"
+            "App\\": "app/"
         }
     },
     "authors": [
