@@ -1,8 +1,8 @@
 <?php
 
-use App\Person;
-
 require_once 'vendor/autoload.php';
+
+use App\Person;
 
 $person = new Person();
 $person->emotion->setJoy(40);
