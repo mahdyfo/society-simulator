@@ -2,8 +2,8 @@
 
 namespace App;
 
-class Emotion {
-
+class Emotion
+{
     // Main emotions
     private int $joy;
     private int $trust;
@@ -13,36 +13,6 @@ class Emotion {
     private int $disgust;
     private int $anger;
     private int $anticipation;
-
-    // Sub emotions
-    private int $optimism;
-    private int $hope;
-    private int $anxiety;
-    private int $love;
-    private int $guilt;
-    private int $delight;
-    private int $submission;
-    private int $curiosity;
-    private int $sentimentality;
-    private int $awe;
-    private int $despair;
-    private int $shame;
-    private int $disapproval;
-    private int $unbelief;
-    private int $outrage;
-    private int $remorse;
-    private int $envy;
-    private int $pessimism;
-    private int $contempt;
-    private int $cynicism;
-    private int $morbidness;
-    private int $aggressiveness;
-    private int $pride;
-    private int $dominance;
-    private int $bittersweetness;
-    private int $ambivalence;
-    private int $frozenness;
-    private int $confusion;
 
     // Main emotions setters and getters
     public function getJoy(): int
@@ -134,8 +104,7 @@ class Emotion {
         int $disgust,
         int $anger,
         int $anticipation
-    ): static
-    {
+    ): static {
         $this->setJoy($joy);
         $this->setTrust($trust);
         $this->setFear($fear);
