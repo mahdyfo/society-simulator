@@ -10,9 +10,4 @@ class Person
     {
         $this->emotion = new Emotion();
     }
-
-    public function setPersonalityType($type)
-    {
-        //
-    }
 }
