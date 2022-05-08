@@ -1,0 +1,17 @@
+{
+    "name": "mahdyfo/society-simulator",
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "mahdyfo",
+            "email": "mahdyfof@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0"
+    }
+}
