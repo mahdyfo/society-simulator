@@ -2,16 +2,23 @@
 
 require_once 'vendor/autoload.php';
 
-use App\Person;
+use App\Agent\Person;
+use App\Attribute\Emotion;
 
+// Agent
 $person = new Person();
-$person->emotion->setJoy(40);
-$person->emotion->setTrust(60);
-$person->emotion->setFear(50);
-$person->emotion->setSurprise(15);
-$person->emotion->setSadness(80);
-$person->emotion->setDisgust(60);
-$person->emotion->setAnger(60);
-$person->emotion->setAnticipation(85);
 
-var_dump($person->emotion->getSubEmotions());
+// Attribute
+$emotion = new Emotion();
+$emotion->setJoy(70)
+    ->setTrust(20)
+    ->setFear(50)
+    ->setSurprise(50)
+    ->setSadness(80)
+    ->setDisgust(80)
+    ->setAnger(70)
+    ->setAnticipation(100);
+
+$person->setAttribute('emotion', $emotion);
+
+var_dump($person->getAttribute('emotion')->getSubEmotions());
