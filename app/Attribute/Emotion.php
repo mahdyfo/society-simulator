@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Attribute;
 
 class Emotion
 {
@@ -20,9 +20,11 @@ class Emotion
         return $this->joy;
     }
 
-    public function setJoy(int $joy): void
+    public function setJoy(int $joy): static
     {
         $this->joy = $joy;
+
+        return $this;
     }
 
     public function getTrust(): int
@@ -30,9 +32,11 @@ class Emotion
         return $this->trust;
     }
 
-    public function setTrust(int $trust): void
+    public function setTrust(int $trust): static
     {
         $this->trust = $trust;
+
+        return $this;
     }
 
     public function getFear(): int
@@ -40,9 +44,11 @@ class Emotion
         return $this->fear;
     }
 
-    public function setFear(int $fear): void
+    public function setFear(int $fear): static
     {
         $this->fear = $fear;
+
+        return $this;
     }
 
     public function getSurprise(): int
@@ -50,9 +56,11 @@ class Emotion
         return $this->surprise;
     }
 
-    public function setSurprise(int $surprise): void
+    public function setSurprise(int $surprise): static
     {
         $this->surprise = $surprise;
+
+        return $this;
     }
 
     public function getSadness(): int
@@ -60,9 +68,11 @@ class Emotion
         return $this->sadness;
     }
 
-    public function setSadness(int $sadness): void
+    public function setSadness(int $sadness): static
     {
         $this->sadness = $sadness;
+
+        return $this;
     }
 
     public function getDisgust(): int
@@ -70,9 +80,11 @@ class Emotion
         return $this->disgust;
     }
 
-    public function setDisgust(int $disgust): void
+    public function setDisgust(int $disgust): static
     {
         $this->disgust = $disgust;
+
+        return $this;
     }
 
     public function getAnger(): int
@@ -80,9 +92,11 @@ class Emotion
         return $this->anger;
     }
 
-    public function setAnger(int $anger): void
+    public function setAnger(int $anger): static
     {
         $this->anger = $anger;
+
+        return $this;
     }
 
     public function getAnticipation(): int
@@ -90,29 +104,9 @@ class Emotion
         return $this->anticipation;
     }
 
-    public function setAnticipation(int $anticipation): void
+    public function setAnticipation(int $anticipation): static
     {
         $this->anticipation = $anticipation;
-    }
-
-    public function setMainEmotions(
-        int $joy,
-        int $trust,
-        int $fear,
-        int $surprise,
-        int $sadness,
-        int $disgust,
-        int $anger,
-        int $anticipation
-    ): static {
-        $this->setJoy($joy);
-        $this->setTrust($trust);
-        $this->setFear($fear);
-        $this->setSurprise($surprise);
-        $this->setSadness($sadness);
-        $this->setDisgust($disgust);
-        $this->setAnger($anger);
-        $this->setAnticipation($anticipation);
 
         return $this;
     }
