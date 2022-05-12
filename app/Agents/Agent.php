@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Agent;
+namespace App\Agents;
 
 class Agent
 {

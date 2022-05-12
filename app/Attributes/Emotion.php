@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Attribute;
+namespace App\Attributes;
 
 class Emotion
 {
@@ -22,7 +22,7 @@ class Emotion
 
     public function setJoy(int $joy): static
     {
-        $this->joy = $joy;
+        $this->joy = max(min($joy, 100), 0);
 
         return $this;
     }
@@ -34,7 +34,7 @@ class Emotion
 
     public function setTrust(int $trust): static
     {
-        $this->trust = $trust;
+        $this->trust = max(min($trust, 100), 0);
 
         return $this;
     }
@@ -46,7 +46,7 @@ class Emotion
 
     public function setFear(int $fear): static
     {
-        $this->fear = $fear;
+        $this->fear = max(min($fear, 100), 0);
 
         return $this;
     }
@@ -58,7 +58,7 @@ class Emotion
 
     public function setSurprise(int $surprise): static
     {
-        $this->surprise = $surprise;
+        $this->surprise = max(min($surprise, 100), 0);
 
         return $this;
     }
@@ -70,7 +70,7 @@ class Emotion
 
     public function setSadness(int $sadness): static
     {
-        $this->sadness = $sadness;
+        $this->sadness = max(min($sadness, 100), 0);
 
         return $this;
     }
@@ -82,7 +82,7 @@ class Emotion
 
     public function setDisgust(int $disgust): static
     {
-        $this->disgust = $disgust;
+        $this->disgust = max(min($disgust, 100), 0);
 
         return $this;
     }
@@ -94,7 +94,7 @@ class Emotion
 
     public function setAnger(int $anger): static
     {
-        $this->anger = $anger;
+        $this->anger = max(min($anger, 100), 0);
 
         return $this;
     }
@@ -106,12 +106,12 @@ class Emotion
 
     public function setAnticipation(int $anticipation): static
     {
-        $this->anticipation = $anticipation;
+        $this->anticipation = max(min($anticipation, 100), 0);
 
         return $this;
     }
 
-    // Sub emotions setters and getters
+    // Sub emotions getters
     public function getOptimism(): int
     {
         return round(($this->getAnticipation() + $this->getJoy()) / 2);
